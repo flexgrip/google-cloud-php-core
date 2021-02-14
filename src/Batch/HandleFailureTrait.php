@@ -76,6 +76,9 @@ trait HandleFailureTrait
      */
     public function handleFailure($idNum, array $items)
     {
+        # Stop saving these dumb files that we don't even know the purpose of
+        return True;
+
         if (!$this->failureFile) {
             $this->initFailureFile();
         }
